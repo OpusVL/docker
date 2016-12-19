@@ -34,6 +34,9 @@ RUN set -x; \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
+RUN apt-get update && \
+    apt-get install -y python-pip python-dev libjpeg-dev zlib1g-dev
+
 # Install Odoo
 ENV ODOO_VERSION 8.0
 ENV ODOO_RELEASE 20160405
