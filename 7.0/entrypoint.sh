@@ -12,10 +12,10 @@ export PGHOST PGPORT PGUSER PGPASSWORD
 case "$1" in
 	--)
 		shift
-		exec python openerp-server "$@"
+		exec openerp-server "$@"
 		;;
 	-*)
-		exec python openerp-server "$@"
+		exec openerp-server "$@"
 		;;
 	*)
 		exec "$@"
